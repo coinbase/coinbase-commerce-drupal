@@ -1,0 +1,8 @@
+services:
+  commerce_coinbasepayments.logger:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['commerce_coinbasepayments']
+  commerce_coinbasepayments.ipn:
+    class: Drupal\commerce_coinbasepayments\Ipn
+    arguments: ['@database', '@entity_type.manager', '@commerce_coinbasepayments.logger', '@config.factory']

@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * Module file for the Commerce Coinbase module.
+ *
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function commerce_coinpayments_help($route_name, RouteMatchInterface $route_match) {
+
+  switch ($route_name) {
+    case 'help.page.commerce_coinbasepayments':
+
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Coinable commerce module for Coinbase Commerce  - Bitcoin/Bitcoin Cash/Litecoin/Etherium Payments') . '</p>';
+
+      return $output;
+  }
+}

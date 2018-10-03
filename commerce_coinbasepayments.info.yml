@@ -1,0 +1,11 @@
+name: 'Coinbase Commerce Payment GateWay'
+type: module
+description: 'Implements Coinbase Commerce payment services for use with Drupal Commerce.'
+package: Commerce (Coinbase Commerce Payments)
+dependencies:
+  - commerce
+  - commerce:commerce_payment
+version: '8.x-1.0'
+core: '8.x'
+project: 'commerce_coinbasepayments'
+datestamp: 1537401600
