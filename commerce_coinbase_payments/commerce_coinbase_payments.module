@@ -13,11 +13,11 @@ use Drupal\Core\Routing\RouteMatchInterface;
 function commerce_coinpayments_help($route_name, RouteMatchInterface $route_match) {
 
   switch ($route_name) {
-    case 'help.page.commerce_coinbasepayments':
+    case 'help.page.commerce_coinbase_payments':
 
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Coinable commerce module for Coinbase Commerce  - Bitcoin/Bitcoin Cash/Litecoin/Etherium Payments') . '</p>';
+      $output .= '<p>' . t('Module for Coinbase Commerce  - Bitcoin/Bitcoin Cash/Litecoin/Ethereum Payments') . '</p>';
 
       return $output;
   }

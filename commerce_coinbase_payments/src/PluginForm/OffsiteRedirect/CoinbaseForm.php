@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\commerce_coinbasepayments\PluginForm\OffsiteRedirect;
+namespace Drupal\commerce_coinbase_payments\PluginForm\OffsiteRedirect;
 
 require_once __DIR__ . '/../../Coinbase/init.php';
 require_once __DIR__ . '/../../Coinbase/const.php';
@@ -45,22 +45,23 @@ class CoinbaseForm extends PaymentOffsiteForm
             ),
             'pricing_type' => 'fixed_price',
             'name' => t('@store order #@order_number', ['@order_number' => $order->id(), '@store' => $store->getName()]),
-            'description' => implode(',', $products),
+            'description' => mb_substr(implode(',', $products), 0, 200),
             'metadata' => [
                 METADATA_SOURCE_PARAM => METADATA_SOURCE_VALUE,
-                METADATA_ORDERID_PARAM => $payment->getOrderId(),
-                METADATA_CLIENTID_PARAM => $order->getCustomerId(),
-                'firstName' => $order->getCustomer()->getName(),
+                METADATA_ORDER_ID_PARAM => $payment->getOrderId(),
+                METADATA_CLIENT_ID_PARAM => $order->getCustomerId(),
                 'email' => $order->getEmail()
             ],
-            'redirect_url' => $form['#return_url']
+            'redirect_url' => $form['#return_url'],
+            'cancel_url' => $form['#cancel_url']
         );
 
         \Coinbase\ApiClient::init($paymentConfiguration['api_key']);
         $chargeObj = \Coinbase\Resources\Charge::create($chargeData);
 
+        $order->setData('charge_id', $chargeObj->id);
+        $order->save();
 
         return $this->buildRedirectForm($form, $form_state, $chargeObj->hosted_url, $chargeData, PaymentOffsiteForm::REDIRECT_GET);
     }
-
 }

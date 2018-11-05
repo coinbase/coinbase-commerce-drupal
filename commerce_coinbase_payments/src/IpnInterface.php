@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\commerce_coinbasepayments;
+namespace Drupal\commerce_coinbase_payments;
 
 use Symfony\Component\HttpFoundation\Request;
 
