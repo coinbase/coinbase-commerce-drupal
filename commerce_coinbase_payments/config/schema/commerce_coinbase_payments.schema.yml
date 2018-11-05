@@ -1,0 +1,9 @@
+commerce_coinbase_payments.commerce_payment_gateway.plugin.coinbase_payments_redirect:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    api_key:
+      type: string
+      label: 'Api Key'
+    secret_key:
+      type: string
+      label: 'Shared Secret'
