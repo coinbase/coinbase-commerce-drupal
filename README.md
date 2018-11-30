@@ -2,7 +2,7 @@ Coinbase Commerce
 =====================
 
 # Drupal module: Commerce Coinbase Commerce Gateway
-This module provides a Drupal Commerce payment method to embed the payment services provided by Coibase Commerce.
+This module provides a Drupal Commerce payment method to embed the payment services provided by Coinbase Commerce.
 Coinbase Commerce is a new service that enables merchants to accept multiple cryptocurrencies directly into a user-controlled wallet.
 This module allows you to integrate Coinbase Commerce easily on your platform.
 Additional information can be found at:
