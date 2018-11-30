@@ -21,3 +21,7 @@ https://commerce.coinbase.com/
    Commerce -> Configuration -> Payment gateways -> Add payment gateway
 4. Log into your Coinbase Commerce Dashboard and go to "Settings" section, copy the Api Key and Webhook Shared Secret from your account and paste them into the corresponding fields at the module's setup page on your Drupal site.
 5. Copy the "Webhook subscription url" from your Drupal Commmerce module setup and paste it into the "Webhook Url" field at the "Notifications" section of your Coinbase Commerce Dashboard https://commerce.coinbase.com/dashboard/settings, then save the changes.
+
+## Integrate with other e-commerce platforms
+
+[Coinbase Commerce Integrations](https://commerce.coinbase.com/integrate)
