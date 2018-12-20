@@ -8,8 +8,8 @@ use Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGateway
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Url;
-use Coinbase\ApiClient;
-use Coinbase\Resources\Charge;
+use CoinbaseCommerce\ApiClient;
+use CoinbaseCommerce\Resources\Charge;
 use Drupal\commerce_payment\Exception\PaymentGatewayException;
 
 /**

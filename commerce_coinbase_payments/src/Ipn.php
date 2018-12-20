@@ -2,11 +2,11 @@
 
 namespace Drupal\commerce_coinbase_payments;
 
-require_once __DIR__ . '/Coinbase/init.php';
+require_once __DIR__ . '/Coinbase/autoload.php';
 require_once __DIR__ . '/Coinbase/const.php';
 
-use Coinbase\Webhook;
-use Coinbase\Resources\Charge;
+use CoinbaseCommerce\Webhook;
+use CoinbaseCommerce\Resources\Charge;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityTypeManagerInterface;

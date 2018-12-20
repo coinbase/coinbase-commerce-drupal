@@ -1,0 +1,4 @@
+/commerce_coinbase_payments/src/Coinbase/*
+!/commerce_coinbase_payments/src/Coinbase/const.php
+/.idea/
+/composer.lock

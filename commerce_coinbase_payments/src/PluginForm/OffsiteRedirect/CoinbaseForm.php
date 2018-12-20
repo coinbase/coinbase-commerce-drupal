@@ -2,7 +2,7 @@
 
 namespace Drupal\commerce_coinbase_payments\PluginForm\OffsiteRedirect;
 
-require_once __DIR__ . '/../../Coinbase/init.php';
+require_once __DIR__ . '/../../Coinbase/autoload.php';
 require_once __DIR__ . '/../../Coinbase/const.php';
 
 use Drupal\commerce_payment\PluginForm\PaymentOffsiteForm;
@@ -56,8 +56,8 @@ class CoinbaseForm extends PaymentOffsiteForm
             'cancel_url' => $form['#cancel_url']
         );
 
-        \Coinbase\ApiClient::init($paymentConfiguration['api_key']);
-        $chargeObj = \Coinbase\Resources\Charge::create($chargeData);
+        \CoinbaseCommerce\ApiClient::init($paymentConfiguration['api_key']);
+        $chargeObj = \CoinbaseCommerce\Resources\Charge::create($chargeData);
 
         $order->setData('charge_id', $chargeObj->id);
         $order->save();

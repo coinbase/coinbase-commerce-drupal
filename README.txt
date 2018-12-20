@@ -15,9 +15,10 @@ https://commerce.coinbase.com/
 
 ## Installation / Configuration
 
-1. Install the Coinbase Commerce Gateway module by copying the commerce_coinbase_payments to a modules directory `modules/contrib`.
-2. In your Drupal site, enable the module in Drupal Extend/List find Coinbase Commerce, click Install button.
-3. Add payment gateway at setting page and configure your API keys:
+1. Download zip archive from [releases page](https://github.com/coinbase/coinbase-commerce-drupal/releases) and unzip or clone plugin and run `composer install` inside clonned folder
+2. Install the Coinbase Commerce Gateway module by copying the commerce_coinbase_payments to a modules directory `modules/contrib`.
+3. In your Drupal site, enable the module in Drupal Extend/List find Coinbase Commerce, click Install button.
+4. Add payment gateway at setting page and configure your API keys:
    Commerce -> Configuration -> Payment gateways -> Add payment gateway
-4. Log into your Coinbase Commerce Dashboard and go to "Settings" section, copy the Api Key and Webhook Shared Secret from your account and paste them into the corresponding fields at the module's setup page on your Drupal site.
-5. Copy the "Webhook subscription url" from your Drupal Commmerce module setup and paste it into the "Webhook Url" field at the "Notifications" section of your Coinbase Commerce Dashboard https://commerce.coinbase.com/dashboard/settings, then save the changes.
+5. Log into your Coinbase Commerce Dashboard and go to "Settings" section, copy the Api Key and Webhook Shared Secret from your account and paste them into the corresponding fields at the module's setup page on your Drupal site.
+6. Copy the "Webhook subscription url" from your Drupal Commmerce module setup and paste it into the "Webhook Url" field at the "Notifications" section of your Coinbase Commerce Dashboard https://commerce.coinbase.com/dashboard/settings, then save the changes.
