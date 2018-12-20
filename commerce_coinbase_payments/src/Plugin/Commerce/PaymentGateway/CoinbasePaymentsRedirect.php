@@ -1,7 +1,7 @@
 <?php
 namespace Drupal\commerce_coinbase_payments\Plugin\Commerce\PaymentGateway;
 
-require_once __DIR__ . '/../../../Coinbase/init.php';
+require_once __DIR__ . '/../../../Coinbase/autoload.php';
 
 use Drupal\commerce_order\Entity\OrderInterface;
 use Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayBase;
