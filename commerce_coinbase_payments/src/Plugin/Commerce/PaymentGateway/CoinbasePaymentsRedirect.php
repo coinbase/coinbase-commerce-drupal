@@ -1,15 +1,15 @@
 <?php
 namespace Drupal\commerce_coinbase_payments\Plugin\Commerce\PaymentGateway;
 
-require_once __DIR__ . '/../../../Coinbase/init.php';
+require_once __DIR__ . '/../../../Coinbase/autoload.php';
 
 use Drupal\commerce_order\Entity\OrderInterface;
 use Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Url;
-use Coinbase\ApiClient;
-use Coinbase\Resources\Charge;
+use CoinbaseCommerce\ApiClient;
+use CoinbaseCommerce\Resources\Charge;
 use Drupal\commerce_payment\Exception\PaymentGatewayException;
 
 /**
